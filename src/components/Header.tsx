@@ -18,7 +18,7 @@ const Header = () => {
     visible: { 
       y: 0, 
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeOut" as const }
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
@@ -27,7 +27,7 @@ const Header = () => {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.3, ease: "easeOut" as const }
+      transition: { duration: 0.3, ease: "easeOut" }
     },
     exit: { 
       opacity: 0, 
@@ -41,7 +41,7 @@ const Header = () => {
     visible: { 
       scale: 1, 
       rotate: 0,
-      transition: { duration: 0.8, ease: "easeOut" as const, delay: 0.2 }
+      transition: { duration: 0.8, ease: "easeOut", delay: 0.2 }
     }
   };
 

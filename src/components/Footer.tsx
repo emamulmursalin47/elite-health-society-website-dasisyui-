@@ -30,7 +30,7 @@ const Footer = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" as const }
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
@@ -39,7 +39,7 @@ const Footer = () => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5, ease: "easeOut" as const }
+      transition: { duration: 0.5, ease: "easeOut" }
     }
   };
 
@@ -236,7 +236,7 @@ const Footer = () => {
             whileTap={{ scale: 0.9 }}
             animate={{ y: [0, -5, 0] }}
             transition={{ 
-              y: { duration: 2, repeat: Infinity, ease: "easeInOut" as const },
+              y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
               scale: { duration: 0.2 },
               backgroundColor: { duration: 0.2 }
             }}

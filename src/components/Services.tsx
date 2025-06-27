@@ -56,7 +56,7 @@ const Services = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" as const } // Correct easing type
+      transition: { duration: 0.8, ease: "easeOut" }
     }
   };
 
@@ -66,7 +66,7 @@ const Services = () => {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" as const } // Correct easing type
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
@@ -76,7 +76,7 @@ const Services = () => {
       opacity: 1,
       scale: 1,
       rotateX: 0,
-      transition: { duration: 0.4, ease: "easeOut" as const } // Correct easing type
+      transition: { duration: 0.4, ease: "easeOut" }
     },
     exit: {
       opacity: 0,

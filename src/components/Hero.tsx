@@ -9,7 +9,7 @@ const Hero = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        staggerChildren: 0.3,
+        staggerChildren: 0.3
       }
     }
   };
@@ -19,12 +19,7 @@ const Hero = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { 
-        duration: 0.8, 
-        type: "spring" as const, // explicitly set to "spring" 
-        stiffness: 100, 
-        damping: 15 
-      }
+      transition: { duration: 0.8, ease: "easeOut" }
     }
   };
 
@@ -33,12 +28,7 @@ const Hero = () => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { 
-        duration: 1, 
-        type: "spring" as const, // explicitly set to "spring" 
-        stiffness: 80, 
-        damping: 12 
-      }
+      transition: { duration: 1, ease: "easeOut" }
     }
   };
 
@@ -47,12 +37,7 @@ const Hero = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { 
-        duration: 0.8, 
-        type: "spring" as const, // explicitly set to "spring"
-        stiffness: 100, 
-        damping: 15 
-      }
+      transition: { duration: 0.8, ease: "easeOut" }
     }
   };
 
@@ -61,12 +46,7 @@ const Hero = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { 
-        duration: 0.8, 
-        type: "spring" as const, // explicitly set to "spring"
-        stiffness: 100, 
-        damping: 15 
-      }
+      transition: { duration: 0.8, ease: "easeOut" }
     }
   };
 
@@ -101,7 +81,7 @@ const Hero = () => {
               className="bg-gradient-to-r from-health-green-400 to-health-blue-400 bg-clip-text text-transparent"
               initial={{ opacity: 0, rotateX: 90 }}
               animate={{ opacity: 1, rotateX: 0 }}
-              transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 80, damping: 12 }}
+              transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
             >
               {" "}Health, Nature & Community
             </motion.span>
@@ -141,10 +121,7 @@ const Hero = () => {
             </motion.a>
             
             <motion.button 
-              onClick={() => {
-                const aboutSection = document.getElementById('about');
-                if (aboutSection) aboutSection.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
               className="btn btn-outline btn-lg px-8 text-lg text-white border-white hover:bg-white hover:text-neutral"
               variants={secondButtonVariants}
               whileHover={{ 

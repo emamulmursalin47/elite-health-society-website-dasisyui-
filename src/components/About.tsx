@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Target, Globe, Heart } from 'lucide-react';
 
@@ -36,6 +37,7 @@ const About = () => {
     }
   };
 
+  
 
   const imageVariants = {
     hidden: { opacity: 0, x: -100, scale: 0.8 },
@@ -43,7 +45,7 @@ const About = () => {
       opacity: 1,
       x: 0,
       scale: 1,
-      transition: { duration: 1, ease: "easeOut" as const }
+      transition: { duration: 1, ease: "easeOut" }
     }
   };
 
@@ -52,7 +54,7 @@ const About = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.8, ease: "easeOut" as const }
+      transition: { duration: 0.8, ease: "easeOut" }
     }
   };
 
@@ -62,7 +64,7 @@ const About = () => {
       opacity: 1,
       scale: 1,
       rotateY: 0,
-      transition: { duration: 0.6, ease: "easeOut" as const }
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
@@ -104,7 +106,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" as const }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
                 About Elite Health Society
               </motion.h2>
@@ -114,7 +116,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" as const }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               >
                 We are a passionate community dedicated to transforming lives through comprehensive wellness. 
                 Our mission encompasses physical fitness, mental health support, environmental stewardship, 
@@ -126,7 +128,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" as const }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
               >
                 Through education, support, and collective action, we empower individuals to live healthier, 
                 more fulfilling lives while making a positive impact on our world.

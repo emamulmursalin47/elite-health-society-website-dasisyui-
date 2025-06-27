@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, type Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Mail, MessageSquare, User, Send, Facebook, Instagram, MapPin, Phone } from 'lucide-react';
 
 const Contact = () => {
@@ -21,19 +21,18 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
+    
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1500));
-
+    
     setSubmitted(true);
     setIsSubmitting(false);
     setFormData({ name: '', email: '', message: '' });
-
+    
     setTimeout(() => setSubmitted(false), 5000);
   };
 
-  // Variants Types
-  const containerVariants: Variants = {
+  const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -44,7 +43,7 @@ const Contact = () => {
     }
   };
 
-  const itemVariants: Variants = {
+  const itemVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
@@ -53,7 +52,7 @@ const Contact = () => {
     }
   };
 
-  const formVariants: Variants = {
+  const formVariants = {
     hidden: { opacity: 0, x: -50 },
     visible: {
       opacity: 1,
@@ -62,7 +61,7 @@ const Contact = () => {
     }
   };
 
-  const contactInfoVariants: Variants = {
+  const contactInfoVariants = {
     hidden: { opacity: 0, x: 50 },
     visible: {
       opacity: 1,
@@ -71,7 +70,7 @@ const Contact = () => {
     }
   };
 
-  const inputVariants: Variants = {
+  const inputVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
@@ -129,7 +128,7 @@ const Contact = () => {
               >
                 Send Us a Message
               </motion.h3>
-
+              
               {submitted ? (
                 <motion.div 
                   className="alert alert-success"
@@ -267,9 +266,9 @@ const Contact = () => {
                 >
                   Connect With Us
                 </motion.h3>
-
+                
                 <div className="space-y-6">
-                  {[ 
+                  {[
                     { icon: Facebook, title: "Facebook Community", desc: "Join our active community", color: "health-green" },
                     { icon: Mail, title: "Email Us", desc: "info@elitehealthsociety.com", color: "health-blue" },
                     { icon: Phone, title: "Call Us", desc: "(555) 123-4567", color: "health-green" },
@@ -331,6 +330,51 @@ const Contact = () => {
                     Instagram
                   </motion.a>
                 </motion.div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              className="card bg-gradient-to-br from-health-green-600 to-health-blue-600 text-white shadow-xl"
+              whileHover={{ 
+                scale: 1.02, 
+                y: -5,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.2)"
+              }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="card-body p-8 text-center">
+                <motion.h3 
+                  className="text-2xl font-bold mb-4"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  Ready to Transform Your Life?
+                </motion.h3>
+                <motion.p 
+                  className="mb-6 opacity-90"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 0.9, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                  Join thousands of others on their wellness journey.
+                </motion.p>
+                <motion.a 
+                  href="https://facebook.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn btn-outline btn-white"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                  Join Our Community Today
+                </motion.a>
               </div>
             </motion.div>
           </motion.div>
